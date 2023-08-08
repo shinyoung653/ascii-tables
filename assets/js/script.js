@@ -92,7 +92,8 @@ function createTable() {
                     ++m;
                 }
             }
-            var l = (n + Math.ceil(m * 3 / 2));
+            // var l = (n + Math.ceil(m * 3 / 2));
+            var l = (n + Math.ceil(m * 2 / 1));
 
             // if (isNewCol || colLengths[j] < data.length) {
             //    colLengths[j] = data.length;
@@ -629,7 +630,9 @@ function _pad(text, length, char, align) {
     for (var k = 0; k < text.length; ++k){
         if(text.charCodeAt(k) < 128){++n;}
         else{++m;}
-    } l = (n + Math.ceil(m * 3 / 2));
+    }
+    // l = (n + Math.ceil(m * 3 / 2));
+    l = (n + Math.ceil(m * 2 / 1));
     var additionalChars = length - l;
     var result = "";
     switch (align) {
