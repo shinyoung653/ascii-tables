@@ -624,7 +624,13 @@ function _pad(text, length, char, align) {
     // align: r l or c
     char = defValue(char, " ");
     align = defValue(align, "l");
-    var additionalChars = length - text.length;
+    // var additionalChars = length - text.length;
+    var n = 0, m = 0, l;
+    for (var k = 0; k < text.length; ++k){
+        if(text.charCodeAt(k) < 128){++n;}
+        else{++m;}
+    } l = (n + Math.ceil(m * 3 / 2));
+    var additionalChars = length - l;
     var result = "";
     switch (align) {
         case "r":
