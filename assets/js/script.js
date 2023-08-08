@@ -85,8 +85,8 @@ function createTable() {
             }
 
             var n = 0, m = 0;
-            for (var i = 0; i < data.length; ++i){
-                if(data.charCodeAt(i) < 128){
+            for (var k = 0; k < data.length; ++k){
+                if(data.charCodeAt(k) < 128){
                     ++n;
                 }else{
                     ++m;
