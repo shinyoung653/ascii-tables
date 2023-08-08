@@ -83,9 +83,24 @@ function createTable() {
                     isNumberCol[j] = false;
                 }
             }
-            if (isNewCol || colLengths[j] < data.length) {
-               colLengths[j] = data.length;
+
+            var n = 0, m = 0;
+            for (var i = 0; i < data.length; ++i){
+                data.charCodeAt(i)
+                if(127 < data.charCodeAt(i)){
+                    ++n;
+                }else{
+                    ++m;
+                }
             }
+            var l = (Math.ceil(n * 3 / 2) + m);
+
+            // if (isNewCol || colLengths[j] < data.length) {
+            //    colLengths[j] = data.length;
+            // }
+            if (isNewCol || colLengths[j] < l) {
+                colLengths[j] = l;
+             }
         }
     }
 
