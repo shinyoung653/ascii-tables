@@ -92,7 +92,7 @@ function createTable() {
                     ++m;
                 }
             }
-            var l = (Math.ceil(n * 3 / 2) + m);
+            var l = (n + Math.ceil(m * 3 / 2));
 
             // if (isNewCol || colLengths[j] < data.length) {
             //    colLengths[j] = data.length;
